@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #040d1a;
+  font-family: 'Inter', sans-serif;
+  color: #e8edf5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4a843 0%, #f0d898 55%, #c49a2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(13, 28, 56, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 168, 67, 0.1);
+}
+
+.glass-card-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  background: rgba(18, 35, 71, 0.75);
+  border-color: rgba(212, 168, 67, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(212, 168, 67, 0.08);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d4a843 0%, #c49a2e 100%);
+  color: #040d1a;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e4c06a 0%, #d4a843 100%);
+  box-shadow: 0 8px 32px rgba(212, 168, 67, 0.38);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #d4a843;
+  border: 1px solid rgba(212, 168, 67, 0.38);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(212, 168, 67, 0.07);
+  border-color: rgba(212, 168, 67, 0.65);
+  transform: translateY(-1px);
+}
+
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(212, 168, 67, 0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-anim {
+  animation: floatY 7s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.section-line {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 168, 67, 0.28) 50%, transparent 100%);
+  height: 1px;
+}
+
+.step-line {
+  background: linear-gradient(180deg, rgba(212, 168, 67, 0.5) 0%, rgba(212, 168, 67, 0.05) 100%);
+}
+
+.nav-sticky {
+  background: rgba(4, 13, 26, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 168, 67, 0.08);
+}
